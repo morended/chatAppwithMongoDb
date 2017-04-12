@@ -1,0 +1,48 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Mounika Rendedla",
+  "scripts": {
+    "start": "webpack",
+    "dev-server":"node ./dev-server.js",
+    "run": "npm-run-all --parallel open:src"
+    
+  },
+  "dependencies": {
+    "events": "^1.0.2",
+    "flux": "^2.0.1",
+    "alt": "^0.18.6",
+    "react": "^15.3.0",
+    "react-bootstrap": "^0.30.2",
+    "react-cookie": "^1.0.3",
+    "react-dom": "^15.3.0",
+    "react-router": "^3.0.0",
+    "react-router-role-authorization": "^1.0.0",
+    "react-tag-input": "^4.4.0",
+    "react-validation-decorator": "^0.4.0",
+     "express": "~4.14.0",
+    "jade": "*",
+    "connect": "*",
+    "mongoose": "*",
+     "superagent": "^3.1.0",
+    "superagent-intercept": "^0.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.21",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-external-helpers-2": "6.3.13",
+    "babel-plugin-transform-class-properties": "^6.6.0",
+    "babel-plugin-transform-es2015-classes": "6.6.5",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "copy-webpack-plugin": "^4.0.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.1",
+    "webpack": "^2.0.0",
+    "webpack-dev-server": "^2.0.0"
+  }
+}
