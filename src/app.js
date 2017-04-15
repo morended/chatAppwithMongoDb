@@ -4,14 +4,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ChatApp from './ChatAppFlux/components/ChatApp.js'
 
-class HelloWorld extends React.Component {
+class MainComponent extends React.Component {
   render() {
-    return(
-       <ChatApp />
-      
-      );
+     return <ChatApp/>;
+  }
 }
-}
-  
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+ReactDOM.render(<MainComponent/>, document.getElementById('app'));

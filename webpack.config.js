@@ -2,7 +2,6 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path=require("path");
 var webpack=require("webpack");
 
-
 module.exports = {
   entry: "./src/app.js",
   output: {
@@ -10,13 +9,13 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
-     
+
     loaders: [
       {
         test: /\.js$/,        // Match both .js and .jsx files
         exclude: /node_modules/,
        loader: "babel-loader"
-                
+
 
       },
       {
@@ -32,9 +31,8 @@ module.exports = {
     compress: true,
     port: 9000,
     proxy: {
-  "/api": "http://localhost:8080",
-  
-}
+      "/api": "http://localhost:8080",
+    }
   },
   plugins: [
 new CopyWebpackPlugin([

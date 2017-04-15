@@ -5,9 +5,8 @@
   "author": "Mounika Rendedla",
   "scripts": {
     "start": "webpack",
-    "dev-server":"node ./dev-server.js",
+    "dev-server": "node ./dev-server.js",
     "run": "npm-run-all --parallel open:src"
-    
   },
   "dependencies": {
     "events": "^1.0.2",
@@ -21,11 +20,11 @@
     "react-router-role-authorization": "^1.0.0",
     "react-tag-input": "^4.4.0",
     "react-validation-decorator": "^0.4.0",
-     "express": "~4.14.0",
+    "express": "~4.14.0",
     "jade": "*",
     "connect": "*",
     "mongoose": "*",
-     "superagent": "^3.1.0",
+    "superagent": "^3.1.0",
     "superagent-intercept": "^0.1.2"
   },
   "devDependencies": {
@@ -40,6 +39,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "copy-webpack-plugin": "^4.0.0",
+    "eslint": "^3.19.0",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.1",
     "webpack": "^2.0.0",

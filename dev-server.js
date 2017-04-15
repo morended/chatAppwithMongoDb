@@ -1,10 +1,13 @@
 require('babel-register');
-var router=require('./routes.js');
-var path=require('path');
+
+const router = require('./routes.js');
+const path = require('path');
 const express = require('express');
 const app = express();
-var mongoose=require('./src/database.js');
+const mongoose = require('./src/database.js');
+
 mongoose.connect();
+
 app.use(express.static(path.join(__dirname, 'public')));
 // Import routes
 app.use('/', router);
