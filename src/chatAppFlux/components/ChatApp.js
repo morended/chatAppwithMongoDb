@@ -36,8 +36,8 @@ class ChatApp extends React.Component {
 
         <h3>Chat History: </h3>
 
-         {this.state.messages.map((message, index) => (
-           <p key={index}>{message.id}:{message.message} </p>
+         {this.state.messages.map((msg, index) => (
+           <p key={index}><b>Student {msg.id}</b>: {msg.message} </p>
          ))}
       </div>
 

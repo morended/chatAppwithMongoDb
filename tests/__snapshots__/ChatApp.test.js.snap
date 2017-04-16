@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatApp component (snapshot) renders correctly 1`] = `
+<div>
+  <br />
+  <div>
+    Student 
+    1
+    :
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Send
+    </button>
+  </div>
+  <div>
+    Student 
+    2
+    :
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      Send
+    </button>
+  </div>
+  <br />
+  <h3>
+    Chat History: 
+  </h3>
+</div>
+`;

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 
 import chatActions from '../src/chatAppFlux/action/chatActions.js';
 import Student from '../src/chatAppFlux/components/Student.js';
@@ -47,7 +47,6 @@ describe('Student component', () => {
 
   it('updates state on text change', () => {
     let evnt = { target : {value: 'test'} };
-    evnt.preventDefault = jest.fn();
     component.find('input').simulate('change', evnt);
     expect(component.state().message).toEqual(evnt.target.value);
   });

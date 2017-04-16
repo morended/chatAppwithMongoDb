@@ -14,7 +14,6 @@ class Student extends React.Component {
   }
 
   _handleOnChange = (e) => {
-     e.preventDefault();
      this.setState({
        message:e.target.value
      });
@@ -27,7 +26,9 @@ class Student extends React.Component {
         message: this.state.message
       });
 
-      this.state.message = "";
+      this.setState({
+        message: ""
+      });
    }
 
    render() {

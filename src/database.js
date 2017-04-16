@@ -5,9 +5,8 @@ const mongoose = require('mongoose');
 
 module.exports = {
   connect: () => {
-   
-   internals.connect(); 
-   console.log("db connected");
+     internals.connect();
+     console.log("Database connected!!");
   },
 
   close: function () {
@@ -19,7 +18,7 @@ module.exports = {
 const internals = {
   connect: function () {
     const options = { server: { socketOptions: { keepAlive: 1 } } };
-    return mongoose.connect('mongodb://localhost:27017/ChatFlux'); 
+    return mongoose.connect('mongodb://localhost:27017/ChatFlux');
   }
 };
 

@@ -11077,13 +11077,18 @@ var ChatApp = function (_React$Component) {
           null,
           'Chat History: '
         ),
-        this.state.messages.map(function (message, index) {
+        this.state.messages.map(function (msg, index) {
           return _react2.default.createElement(
             'p',
             { key: index },
-            message.id,
-            ':',
-            message.message,
+            _react2.default.createElement(
+              'b',
+              null,
+              'Student ',
+              msg.id
+            ),
+            ': ',
+            msg.message,
             ' '
           );
         })
@@ -12332,13 +12337,16 @@ var Student = function (_React$Component) {
       });
     };
 
-    _this._handleClick = function () {
+    _this._handleClick = function (e) {
+      e.preventDefault();
       _chatActions2.default.updateMessages({
         id: _this.props.id,
         message: _this.state.message
       });
 
-      _this.state.message = "";
+      _this.setState({
+        message: ""
+      });
     };
 
     _this.state = {

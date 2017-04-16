@@ -12,7 +12,7 @@ class chatActions {
         .send(payload)
         .end((err, res) => this.handleResponse(err, res, dispatch));
       };
-  };
+  }
 
   handleResponse(error, result, dispatch) {
     if (error) {
