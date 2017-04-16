@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack",
     "dev-server": "node ./dev-server.js",
-    "run": "npm-run-all --parallel open:src"
+    "run": "npm-run-all --parallel open:src",
+    "test": "jest"
   },
   "dependencies": {
     "events": "^1.0.2",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.3.21",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^6.2.0",
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-plugin-external-helpers-2": "6.3.13",
@@ -39,10 +41,24 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "copy-webpack-plugin": "^4.0.0",
+    "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
+    "jest": "^19.0.2",
     "mongodb": "^2.2.25",
     "mongoose": "^4.9.1",
+    "react-addons-test-utils": "^15.5.1",
+    "react-test-renderer": "^15.5.4",
     "webpack": "^2.0.0",
     "webpack-dev-server": "^2.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/chatAppFlux"
+    ]
   }
 }

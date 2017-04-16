@@ -14,12 +14,14 @@ class Student extends React.Component {
   }
 
   _handleOnChange = (e) => {
+     e.preventDefault();
      this.setState({
        message:e.target.value
      });
    }
 
-   _handleClick = () => {
+   _handleClick = (e) => {
+      e.preventDefault();
       chatActions.updateMessages({
         id: this.props.id,
         message: this.state.message
@@ -31,9 +33,16 @@ class Student extends React.Component {
    render() {
      return (
         <div>
-          {this.props.id}
-          <input type="text"  value={this.state.message} onChange={this._handleOnChange}/>
-          <input type="Button" value="send"  onClick={this._handleClick}/>
+          Student {this.props.id}:
+          <input
+            type="text"
+            value={this.state.message}
+            onChange={this._handleOnChange}/>
+
+          <button
+            onClick={this._handleClick}>
+            Send
+          </button>
         </div>
      );
   }

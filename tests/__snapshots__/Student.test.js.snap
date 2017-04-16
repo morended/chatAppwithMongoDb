@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Student component (snapshot) renders correctly 1`] = `
+<div>
+  Student 
+  1
+  :
+  <input
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    Send
+  </button>
+</div>
+`;

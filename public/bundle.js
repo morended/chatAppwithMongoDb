@@ -11040,10 +11040,15 @@ var ChatApp = function (_React$Component) {
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (ChatApp.__proto__ || (0, _getPrototypeOf2.default)(ChatApp)).call(this));
 
+    _this.onChange = function (state) {
+      _this.setState({
+        messages: state.messages
+      });
+    };
+
     _this.state = {
       messages: []
     };
-    _this.onChange = _this.onChange.bind(_this);
     return _this;
   }
 
@@ -11058,23 +11063,17 @@ var ChatApp = function (_React$Component) {
       _chatStore2.default.unlisten(this.onChange);
     }
   }, {
-    key: 'onChange',
-    value: function onChange(state) {
-      this.setState({
-        messages: state.messages
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_Student2.default, { id: 'Student 1: ' }),
-        _react2.default.createElement(_Student2.default, { id: 'Student 2: ' }),
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(_Student2.default, { id: '1' }),
+        _react2.default.createElement(_Student2.default, { id: '2' }),
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'h2',
+          'h3',
           null,
           'Chat History: '
         ),
@@ -12354,9 +12353,19 @@ var Student = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
+        'Student ',
         this.props.id,
-        _react2.default.createElement('input', { type: 'text', value: this.state.message, onChange: this._handleOnChange }),
-        _react2.default.createElement('input', { type: 'Button', value: 'send', onClick: this._handleClick })
+        ':',
+        _react2.default.createElement('input', {
+          type: 'text',
+          value: this.state.message,
+          onChange: this._handleOnChange }),
+        _react2.default.createElement(
+          'button',
+          {
+            onClick: this._handleClick },
+          'Send'
+        )
       );
     }
   }]);

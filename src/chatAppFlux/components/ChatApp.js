@@ -11,7 +11,6 @@ class ChatApp extends React.Component {
     this.state = {
       messages: []
     };
-   this.onChange=this.onChange.bind(this);
   }
 
   componentDidMount() {
@@ -22,7 +21,7 @@ class ChatApp extends React.Component {
     chatStore.unlisten(this.onChange)
   }
 
-  onChange(state) {
+  onChange = (state) => {
     this.setState({
       messages:state.messages
     });
@@ -31,13 +30,14 @@ class ChatApp extends React.Component {
   render() {
     return (
       <div>
-        <Student id="Student 1: " />
-        <Student id="Student 2: "/><br/>
+        <br/>
+        <Student id="1"/>
+        <Student id="2"/><br/>
 
-        <h2>Chat History: </h2>
+        <h3>Chat History: </h3>
 
          {this.state.messages.map((message, index) => (
-         <p key={index}>{message.id}:{message.message} </p>
+           <p key={index}>{message.id}:{message.message} </p>
          ))}
       </div>
 
