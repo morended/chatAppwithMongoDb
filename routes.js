@@ -15,4 +15,12 @@ router.post('/api/chats/sendMessage', function(req, res) {
   return chatController.create(req,res);
 });
 
+router.post('/api/register', function(req, res) {
+  return chatController.register(req,res);
+});
+
+router.post('/api/login', function(req, res) {
+  return chatController.login(req,res);
+});
+
 module.exports = router;
