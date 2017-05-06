@@ -3,28 +3,6 @@ import http from "superagent"
 
 class chatActions {
 
-  //registerUser(payload) {
-    //return (dispatch) => {
-      //http
-        //.post('/api/register')
-        //.set('Content-Type', 'application/json')
-        //.query(payload)
-        //.send(payload)
-        //.end((err, res) => this.handleResponse(err, res, dispatch));
-    //};
-  //}
-
-  //loginUser(payload) {
-    //return (dispatch) => {
-      //http
-        //.post('/api/login')
-        //.set('Content-Type', 'application/json')
-        //.query(payload)
-        //.send(payload)
-        //.end((err, res) => this.handleResponse(err, res, dispatch));
-    //};
-  //}
-
   updateMessages(payload) {
     return (dispatch) => {
       http

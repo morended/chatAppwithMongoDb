@@ -7658,11 +7658,12 @@ var LoginForm = function (_Component) {
         key: 'onSubmit',
         value: function onSubmit(e) {
             e.preventDefault();
+            console.log('submitting');
             _userActions2.default.loginUser(this.state);
-            this.state = {
+            this.setState({
                 username: "",
                 password: ""
-            };
+            });
         }
     }, {
         key: 'render',
@@ -13597,30 +13598,6 @@ var chatActions = function () {
 
   (0, _createClass3.default)(chatActions, [{
     key: "updateMessages",
-
-
-    //registerUser(payload) {
-    //return (dispatch) => {
-    //http
-    //.post('/api/register')
-    //.set('Content-Type', 'application/json')
-    //.query(payload)
-    //.send(payload)
-    //.end((err, res) => this.handleResponse(err, res, dispatch));
-    //};
-    //}
-
-    //loginUser(payload) {
-    //return (dispatch) => {
-    //http
-    //.post('/api/login')
-    //.set('Content-Type', 'application/json')
-    //.query(payload)
-    //.send(payload)
-    //.end((err, res) => this.handleResponse(err, res, dispatch));
-    //};
-    //}
-
     value: function updateMessages(payload) {
       var _this = this;
 
